@@ -1,0 +1,6 @@
+[submodule "ink-kernel"]
+	path = ink-kernel
+	url = https://github.com/ka-moamoa/protean-ink-kernel.git
+[submodule "chameleon"]
+	path = chameleon
+	url = https://github.com/ka-moamoa/protean-chameleon.git
