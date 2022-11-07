@@ -2,9 +2,9 @@
 
 
 ## Required Hardware:
-1. [MAX78000EVKIT](https://www.maximintegrated.com/en/products/microcontrollers/MAX78000EVKIT.html) OR [MAX78000FTHR](https://www.maximintegrated.com/en/products/microcontrollers/MAX78000FTHR.html)
+1. [Supersensor Board](https://github.com/ka-moamoa/protean-hardware)
 
-2. ARM Cortex debugger like JLINK debugger (e.g. [J-Link EDU Mini](https://www.adafruit.com/product/3571?gclid=EAIaIQobChMIqeXO9fvS7QIVEI3ICh3I5g0TEAQYAiABEgJDwvD_BwE)) OR [MAX32625PICO](https://www.maximintegrated.com/en/products/microcontrollers/MAX32625PICO.html) for MAX78000EVKIT. MAX78000FTHR can be programmed and debugged without any external debugger (a microcontroller on FTHR board  is preprogrammed with DAPLink firmware)
+2. ARM Cortex debugger like JLINK debugger (e.g. [J-Link EDU Mini](https://www.adafruit.com/product/3571?gclid=EAIaIQobChMIqeXO9fvS7QIVEI3ICh3I5g0TEAQYAiABEgJDwvD_BwE)) OR [MAX32625PICO](https://www.maximintegrated.com/en/products/microcontrollers/MAX32625PICO.html).
 
 3. USB cables depending on the type of USB ports of your computer <br><br>
 
@@ -93,7 +93,7 @@
 
 5. You may set up VS Code [keyboard shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings) to make `clean`, `build` and `flash` process smoother and faster
 
-6. Install [Cortex-Debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug) extension in VS Code. Change `adapter driver` to `cmsis-dap` [here](https://gitlab.com/ka-moamoa/supersensor/software/runtime/embedded-firmware/-/blob/2-fram-driver/.vscode/launch.json#L16) if you are using MAX32625PICO debugger or MAX78000FTHR. A run symbol on left side bar in VS Code will appear. Click on it and then click green run button on top left. This will build the code and you will see the pointer on `main()`. Now you can put breakpoints and start debugging as you like. Happy debugging :)
+6. Install [Cortex-Debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug) extension in VS Code. Change `adapter driver` to `cmsis-dap` [here](https://gitlab.com/ka-moamoa/supersensor/software/runtime/embedded-firmware/-/blob/2-fram-driver/.vscode/launch.json#L16). A run symbol on left side bar in VS Code will appear. Click on it and then click green run button on top left. This will build the code and you will see the pointer on `main()`. Now you can put breakpoints and start debugging as you like. Happy debugging :)
 
 7. Open terminal, change usb device path in the command below and run. Start executing instructions in debug mode to see all printf messages in the terminal. You may use any other serial tools for this.
 
