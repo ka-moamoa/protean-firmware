@@ -1,0 +1,23 @@
+{
+  
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "launch",
+        "type": "cortex-debug",
+        "request": "launch",
+        "cwd": "${workspaceRoot}",
+        "servertype": "openocd",
+        "gdbPath": "${env:ARM_PATH}/bin/arm-none-eabi-gdb",
+        "armToolchainPath": "${env:ARM_PATH}/bin/",
+        "configFiles": ["${env:MAXIM_PATH}/Tools/OpenOCD/scripts/target/max78000.cfg"],
+        "openOCDPreConfigLaunchCommands": [ "adapter driver jlink"],
+        "preLaunchTask": "build-debug",
+        "executable": "${workspaceRoot}/build/max78000.elf",
+        "runToMain": true,
+      },
+    ]
+  }

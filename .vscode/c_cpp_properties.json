@@ -1,0 +1,22 @@
+{
+  
+  "version": 4,
+  "configurations": [
+    {
+      "name": "gcc-arm",
+      "includePath": [
+        "${env:MAXIM_PATH}/Libraries/**",
+        "${workspaceFolder}/**"
+      ],
+      "defines": [],
+      "compilerPath": "${env:ARM_PATH}/bin/arm-none-eabi-gcc",
+      "intelliSenseMode": "gcc-arm",
+      "browse": {
+        "path": [
+          "${env:MAXIM_PATH}/Libraries/**",
+          "${workspaceFolder}/**"
+        ]
+      }
+    }
+  ]
+}

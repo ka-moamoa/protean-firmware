@@ -1,0 +1,68 @@
+{
+  
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build-release",
+        "type": "shell",
+        "command": "make release",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": "$gcc"
+      },
+      {
+        "label": "build-debug",
+        "type": "shell",
+        "command": "make clean && make",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": "$gcc"
+      },
+      {
+        "label": "clean",
+        "type": "shell",
+        "command": "make clean",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": "$gcc"
+      },
+      {
+        "label": "deepclean",
+        "type": "shell",
+        "command": "make distclean",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": "$gcc"
+      },
+      {
+        "label": "flash-jlink",
+        "type": "shell",
+        "command": "openocd -c \"set MAXIM_PATH ${MAXIM_PATH}\" -f config/flash_jlink.cfg",
+        "group": {
+          "kind": "test",
+          "isDefault": true
+        },
+        "problemMatcher": "$gcc"
+      },
+      {
+        "label": "flash-cmsis-dap",
+        "type": "shell",
+        "command": "openocd -c \"set MAXIM_PATH ${MAXIM_PATH}\" -f config/flash_cmsis_dap.cfg",
+        "group": {
+          "kind": "test",
+          "isDefault": true
+        },
+        "problemMatcher": "$gcc"
+      }
+    ]
+  }
